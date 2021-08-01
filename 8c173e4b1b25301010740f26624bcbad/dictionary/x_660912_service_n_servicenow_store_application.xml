@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="ServiceNow Store Application" max_length="40" name="x_660912_service_n_servicenow_store_application" type="collection">
+        <element label="Email" max_length="40" name="email" type="string"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+        <element choice="1" label="Type of Store" max_length="40" name="type_of_store" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Food" value="Food"/>
+                <element inactive_on_update="false" label="Groceries" value="Groceries"/>
+                <element inactive_on_update="false" label="Water" value="Water"/>
+            </choice>
+        </element>
+        <element label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="user"/>
+        </index>
+    </element>
+</database>
